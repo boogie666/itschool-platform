@@ -1,0 +1,84 @@
+title:
+  OOP Basics - Part 2
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  You must create a subclass of Person that models Celebrities in code.
+  You know that the Person class accepts two string as constructor params, the firstName and the lastName.
+
+  But as we all know Celebrities don't have last names.
+  But they do have a string represeting the industry in which this Person is famous.
+
+  public class Celebrity *:extends:* Person {
+
+    private final *:industry:* industry;
+
+    public Celebrity(String firstName, String industry) {
+      *:super:*(*:constructorParams:*);
+      *:this:*.industry = industry;
+    }
+
+    public String getIndustry() {
+      return *:this2:*industry;
+    }
+
+    *:override:*
+    public String getFullName() {
+      return getFirstName();
+    }
+  }
+
+
+
+choices:
+  extends:
+    dropdown: ["implements", "extends", "subclass", ":"]
+  industry: 
+    dropdown: ["char[]", "Object", "String", "void"]
+  super:
+    dropdown: ["parent", "constructor", "this.parent", "super"]
+  constructorParams:
+    dropdown: [ "firstName, null", "firstName, lastName", "firstName, industry", "null, null"]
+  this: 
+    dropdown: ["this", "self", "me", "that"]
+  this2: 
+    dropdown: ["this", "self", "me", "that"]
+  override:
+    dropdown: ["@Subclass", "[Override]", "@Override", "@Overload"]
+ 
+answers:
+  extends: "extends"
+  industry: "String"
+  super: "super"
+  constructorParams: "firstName, null"
+  this: "this"
+  this2: "this"
+  override: "@Override"
+ 
+
+explanation: |
+  Subclassing (or inheritance) in java is done via the 'extends' keyword.
+  
+  If the super class (Person in the case) has a non-default constructor 
+  the parent constructor needs to called manually.
+
+  this is done via the 'super()' call.
+
+  in this case we need initialize only the first name and set the last name to null
+  (because celebrities don't have last names)
+  so the super call looks like this:
+     super(firstName, null);
+
+  the second param, for the subclass is used in it's constructor to set the 
+  'industry' field.
+
+
+  We need to also override the getFullName() method so that we make sure 
+  that only the firstName is used.
+
+  to ensure the method signiture is correctly overrided we need to use the 
+  @Override annotation.
+
+

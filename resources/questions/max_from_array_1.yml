@@ -1,0 +1,68 @@
+title:
+  Maximum from an array.
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Write a method that returns the maximun from an array of doubles.
+
+
+  public static *:returnType:* findMax( *:argumentType:* ){
+    *:declareMax:* ;
+    for(int i = 1; i < *:arrayLength:* ; i++){
+      if( *:condition:* ){
+        max = *:currentElementFromArray:* ;
+      }
+    }
+    return max;
+  }
+
+
+  
+choices:
+  returnType: 
+    dropdown: ["double", "float", "void", "null"]
+  argumentType: 
+    dropdown: ["double[] array", "double array[]", "array[]", "array*"]
+  arrayLength: 
+    dropdown: ["len(array)", "array.length", "array.size()", "array.length()"]
+  condition: 
+    dropdown: ["max > array[i]", "max < array[i]", "max < array.get(i)", "max < nth(array,1)"]
+  declareMax: 
+    dropdown: ["max = first(array)", "double max = first(array)", "double max = array[0]", "max = array[0]"]
+  currentElementFromArray: 
+    dropdown: ["array.current", "array[i]", "array.get(i)", "array.i"]
+
+# The 'answers' tag must contain the same keys a the 'choises' tag, but the value should be the expected answer.
+# Again everything is string that will be trimmed.
+# a question is considered correct if all answers provided by the student are correct
+#
+answers:
+  returnType: "double"
+  argumentType: "double[] array"
+  arrayLength: "array.length"
+  condition: "max < array[i]"
+  declareMax: "double max = array[0]"
+  currentElementFromArray: "array[i]"
+
+explanation: |
+  The question askes you to write a method that finds the max of an array of doubles.
+  This implies that the return type of must be a double.
+
+  To find the max, first declare a max value of type double and assume that it's the first
+  element in the array;
+
+      double max = array[0];
+
+  Then we loop though the remainder of the array (i.e. we start from 1) 
+  and check if any element is greater then the current max.
+  if we find something greater the the current max, max becomes this greater element.
+
+    for(int i = 1; i < array.length; i++){
+      if( max < array[i] ){
+        max = array[i];
+      }
+    }
+
+    return max;

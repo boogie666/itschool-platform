@@ -1,0 +1,59 @@
+title:
+ This seems odd...
+ 
+author:
+  Bogdan Bugarschi
+
+text: |
+  Odd-numbered rows should be silver. 
+  Even-numbered rows should be white. 
+
+  Make it so!
+
+  public class Colors {
+
+    public static void main(String[] args) {
+      String bgColor;
+      for(int i = 0; i < 20; i++) {
+        if (i *:choice1:* 2 == *:choice2:*) {
+          bgColor = "silver";
+        } else {
+          bgColor = "white";
+        }
+      }
+    }
+  }
+
+  
+choices:
+  choice1:
+    dropdown: ["%", "/", "*"]
+  choice2:
+    dropdown: ["0", "1", "2"]
+
+
+answers:
+  choice1: "%"
+  choice2: "1"
+ 
+explanation: |
+
+  This is a use of the modulus operator (%), which returns a remainder after division. 
+  To fit the code to make odd-numbered rows silver,
+  the modulus should be set to 1 to fit the logic of making the background color silver.
+  The finished code looks like this:
+
+  public class Colors {
+
+    public static void main(String[] args) {
+      String bgColor;
+      for(int i = 0; i < 20; i++) {
+        if (i % 2 == 1) {
+          bgColor = "silver";
+        } else {
+          bgColor = "white";
+        }
+      }
+    }
+  }
+

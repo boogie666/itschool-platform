@@ -1,0 +1,80 @@
+title:
+  Objects and props
+ 
+author:
+  Bogdan Bugarschi
+
+text: |
+  The following code example creates a new class to allow the creation of objects stored as shirts. 
+  Fill in the missing code pieces to correctly instantiate the class as an object and print the color property of the new object.
+
+  public class Shirt {
+    String size;
+    String sleeve;
+    String color;
+
+    public static void main (String args[]) {
+      *:choice1:*
+
+      System.out.println(
+        *:choice2:*
+      );
+    }
+
+    public Shirt (String size, String sleeve, String color) {
+      this.size = size;
+      this.sleeve = sleeve;
+      this.color = color;
+    }
+
+  }
+
+
+  
+choices:
+  choice1:
+    dropdown: ["Shirt shirt1 = new Shirt(\"XL\", \"Long\", \"Blue\");",
+               "shirt shirt1 = new shirt(\"XL\", \"Long\", \"Blue\");",
+               "Shirt shirt1 = new shirt(\"XL\", \"Long\", \"Blue\");",
+               "shirt shirt1 = new shirt(\"XL\", \"Long\", \"Blue\");"]
+
+  choice2:
+    dropdown: ["shirt1.color", 
+               "shirt.color",
+               "Shirt.color"]
+
+
+answers:
+  choice1: "Shirt shirt1 = new Shirt(\"XL\", \"Long\", \"Blue\");"
+  choice2: "shirt1.color"
+ 
+explanation: |
+  The syntax for instantiating a class is:
+
+  Class newObject = new Class(arguments).
+
+  Thus, the correct code for creating a new shirt object is:
+
+  Shirt shirt1 = new Shirt("XL", "Long", "Blue");
+
+  Then, the object name needs to be referred to in the println statement. The correct finished code is as follows:
+
+  public class Shirt {
+    String size;
+    String sleeve;
+    String color;
+
+    public static void main (String args[]) {
+      Shirt shirt1 = new Shirt("XL", "Long", "Blue");
+
+      System.out.println(shirt1.color);
+    }
+
+    public Shirt (String size, String sleeve, String color) {
+      this.size = size;
+      this.sleeve = sleeve;
+      this.color = color;
+    }
+
+  }
+

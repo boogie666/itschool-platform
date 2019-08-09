@@ -1,0 +1,41 @@
+title:
+  Casting stuff to other stuff
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Evaluate the code below and select the correct anwers from dropdowns.
+    
+    double a = 42.42;
+    int b = (int) a;
+    byte c = (byte) b;
+
+  What is the value of a? *:valueA:*
+  What is the value of b? *:valueB:*
+  What is the value of c? *:valueC:*
+
+choices:
+  valueA: 
+    dropdown: ["42.42", "42", "42.42f" ,"Compile Error"]
+  valueB: 
+    dropdown: ["42.42", "42.00", "42", "Compile Error"]
+  valueC: 
+    dropdown: ["42.42", "42", "42.42", "Compile Error"]
+
+
+
+answers:
+  valueA: "42.42"
+  valueB: "42"
+  valueC: "42"
+
+explanation: |
+  When converting from a floating point number (either single or double precision) to an int
+  the decimals are lost in conversion.
+
+  This has the effect of rounding the number down.
+
+  When converting an int to a byte, the if the value is within the range bytes, the value remains unchanged.
+  But it the number is out range, then it is converted to a value between -128 and 127
+  as if counting from 0 up to the number, and when you get to 127, the next number in line is -127.

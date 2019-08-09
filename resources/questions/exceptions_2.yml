@@ -1,0 +1,67 @@
+title:
+  Preventing it from hitting the fan...
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Evaluate the following code example, and, using the drop-down lists, fill in the missing pieces of code to accomplish the following:
+
+    The scanner should attempt to read the data and display content from it.
+    If there is an error, the error message should be displayed.
+    The last line of output should read "Thank you for using the scanner."
+
+
+  public static void main(String[] args) {
+    *:choice1:*{
+      Scanner scanner = new Scanner("1 Red 2 Blue 3 Green 4 Yellow 5 Silver");
+      Object res1 = scanner.next();
+      Object res2 = scanner.nextInt();
+      Object res3 = scanner.next();
+    }*:choice2:*(Exception ex) {
+      System.out.println(ex.*:choice3:* ());
+    } *:choice4:* {
+      System.out.println("Thank you for using the scanner.");
+    }
+  }
+
+  
+choices:
+  choice1:
+    dropdown: ["try", "catch","finally"]
+  choice2:
+    dropdown: ["try", "catch","finally", "error"]
+  choice3:
+    dropdown: ["getMessage", "printMessage", "displayMessage"]
+  choice4:
+    dropdown: ["try", "catch", "finally", "done"]
+
+
+answers:
+  choice1: "try"
+  choice2: "catch"
+  choice3: "getMessage"
+  choice4: "finally"
+  
+
+explanation: |
+  This is an example of a try-catch-finally block becoming necessary. 
+  The try block should be around the code being attempted, which is the code using the Scanner utility. 
+  The catch block catches exceptions and displays their information. 
+  In this instance, the getMessage method will display the error message, if there is one. 
+  The finally block runs whether the try or catch block run prior to the code in the finally block. 
+  The completed code looks like this:
+
+  public static void main(String[] args) {
+    try {
+      Scanner scanner = new Scanner("1 Red 2 Blue 3 Green 4 Yellow 5 Silver");
+      Object res1 = scanner.next();
+      Object res2 = scanner.nextInt();
+      Object res3 = scanner.next();
+    } catch(Exception ex) {
+      System.out.println(ex.getMessage());
+    } finally {
+      System.out.println("Thank you for using the scanner.");
+    }
+  }
+

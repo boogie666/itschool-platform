@@ -1,0 +1,51 @@
+title:
+  Casting stuff to other stuff 2 - Revelations.
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Evaluate the code below and select the correct anwers from dropdowns.
+    
+
+    char a = 'a';
+    char b = (char) ((int) a + 1);
+    int c = (int) b;
+
+  What is the value of a? *:valueA:*
+  What is the value of b? *:valueB:*
+  What is the value of c? *:valueC:*
+
+choices:
+  valueA: 
+    dropdown: ["'a'", "'b'", "'c'", "98", "Compile Error"]
+  valueB: 
+    dropdown: ["'a'", "'b'", "'c'", "98", "Compile Error"]
+  valueC: 
+    dropdown: ["'a'", "'b'", "'c'", "98", "Compile Error"]
+
+
+
+answers:
+  valueA: "'a'"
+  valueB: "'b'"
+  valueC: "98"
+
+explanation: |
+  Every character is actually a number.
+  the letter 'a' for example is the number 97.
+  
+  Letter are stored in alphabetical order in this way.
+  So the futher down the alphabet we go the higher the number will be.
+
+  'b' is 98
+  'c' is 99
+  'd' is 100
+  etc..
+
+  Thus when converting a char to an int you get the numeric value of that character.
+
+  So for 'a' we get 97.
+
+  If then we then add 1 to that number (98) and convert back to a character you get the letter 'b'.
+  Converting from back from 'b' to a number returns the numeric value 98 again.

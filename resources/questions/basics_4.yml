@@ -1,0 +1,24 @@
+title:
+  A simple question.  
+ 
+author:
+  Bogdan Bugarschi
+
+text: |
+  Which method type does not require a result to be returned?
+
+
+  *:answer:*
+
+  
+choices:
+  answer:
+    radio: ["integer", "void", "String", "boolean"]
+
+answers:
+  answer: "void"
+ 
+explanation: |
+  The void method type does not return a result. 
+  Methods with data types such as integers, strings, doubles, and floats 
+  do need a return statement as the whole purpose of those data types is to return a result.

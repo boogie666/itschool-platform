@@ -1,0 +1,71 @@
+title:
+  OOP Basics - Not the last one...
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  You're interviewing as a <generic programming role> at <large software company>
+  As part of your interview you given the following question by the HR department
+
+    'Where do you see your self in 5 years?'
+
+  You decide to leave, because this is an inherently stupid question...
+
+  Some time later you go a different interview and
+  the lead developer shows you this class.
+  
+  public class HelloWorld{
+    int x = 42;
+    static int y = 24;
+
+    public void doAwesomeWork(){
+      int x = 10;
+      int y = 100;
+
+      System.out.println("x=" + x);
+      System.out.println("y=" + y);
+      System.out.println("x=" + this.x);
+      System.out.println("y=" + HelloWorld.y);
+    }
+
+  }
+ 
+  and asks you the following:
+
+  What is the output of the first println statement?   *:first:*
+  What is the output of the second println statement?  *:second:*
+  What is the output of the third println statement?   *:third:*
+  What is the output of the fourth println statement?  *:fourth:*
+  
+choices:
+  first: 
+    dropdown: ["x=42", "x=24", "x=10", "x=100"]
+  second: 
+    dropdown: ["y=42", "y=24", "y=10", "y=100"]
+  third: 
+    dropdown: ["x=42", "x=24", "x=10", "x=100"]
+  fourth: 
+    dropdown: ["y=42", "y=24", "y=10", "y=100"]
+
+
+
+
+answers:
+  first: "x=10"
+  second: "y=100"
+  third: "x=42"
+  fourth: "y=24"
+
+explanation: |
+  Variable can have the same name as either static or memeber fields. 
+  
+  When determining what value a variable has, java looks at the closest
+  enclosing scope, if the variable is not there then it looks at the next scope 
+  and so on... until it either finds a variable with the needed name or fails with
+  a compilation error.
+
+  when using 'this.x' we're refering directly to the member scope, effectly bypassing
+  the current function scope.
+
+  when using 'HelloWorld.y' we're refereing to the static scope.

@@ -1,0 +1,39 @@
+title:
+  Choose the datatypes...
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Choose the correct data types for given values such that every value use the least amout of memory.
+
+  *:double:* 100.234d
+  *:float:* 42.234f
+  *:boolean:* true
+  *:int:* 4200000
+  *:byte:* 42
+
+
+
+choices:
+  double:
+    dropdown: ["int", "short", "float", "byte", "boolean", "double"]
+  boolean:
+    dropdown: ["int", "short", "float", "byte", "boolean", "double"]
+  int:
+    dropdown: ["int", "short", "float", "byte", "boolean", "double"]
+  float:
+    dropdown: ["int", "short", "float", "byte", "boolean", "double"]
+  byte:
+    dropdown: ["int", "short", "float", "byte", "boolean", "double"]
+
+
+answers:
+  double: "double"
+  float: "float"
+  int: "int"
+  boolean: "boolean"
+  byte: "byte"
+
+explanation: |
+  See here https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html

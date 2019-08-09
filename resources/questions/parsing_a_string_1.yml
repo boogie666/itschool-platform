@@ -1,0 +1,41 @@
+title:
+  Parsing a string to a boolean
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  You have the following value
+  
+    String x = "true";
+
+  Which of the following lines convers the string into a boolean value
+  *:codeLine:*
+
+
+choices:
+  codeLine: 
+    radio: ["boolean b = (boolean) x;", "Boolean b = Boolean.parseBoolean(x);", "Boolean b = String.toBoolean(x)", "Boolean b = x.asBoolean();"]
+
+answers:
+  codeLine: "Boolean b = Boolean.parseBoolean(x);"
+
+explanation: |
+  All primary datatypes have a 'wrapper' class.
+  (Generally it's called like the primitive, but starting with uppercase)
+
+  These wrapper classes offer various ways to transform the values (among other features)
+
+  One transform is 'parsing'. 
+
+  Parsing will atempt to transform the string representation of a given type to the actuall representation.
+
+  In this case
+  
+  Boolean.parseBoolean(x) is the correct answer as the parseBoolean static method of the Boolean class
+  does exactly this.
+
+  for the given case we know that the code will work, since the value of x is the string representation of true.
+  (it world also work for false)
+
+  but any other value for x would throw an exception at runtime.

@@ -1,0 +1,39 @@
+title:
+  Choose the datatypes 2 Electric boogaloo...
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Choose the correct data types for given values such that every value use the least amout of memory.
+
+  *:string:* "100.234d"
+  *:char:* 'a'
+  *:boolean:* false
+  *:long:* 42000000000
+  *:byte:* 42
+
+
+
+choices:
+  string:
+    dropdown: ["long", "char", "byte", "boolean", "double", "String"]
+  boolean:
+    dropdown: ["long", "char", "byte", "boolean", "double", "String"]
+  char:
+    dropdown: ["long", "char", "byte", "boolean", "double", "String"]
+  long:
+    dropdown: ["long", "char", "byte", "boolean", "double", "String"]
+  byte:
+    dropdown: ["long", "char", "byte", "boolean", "double", "String"]
+
+
+answers:
+  string: "String"
+  char: "char"
+  long: "long"
+  boolean: "boolean"
+  byte: "byte"
+
+explanation: |
+  See here https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html

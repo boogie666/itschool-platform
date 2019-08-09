@@ -1,0 +1,63 @@
+title:
+  How much do you earn?!?!
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Some bean counter in your office did the math wrong
+  for you monthly salary.
+
+  Here's the math he used
+
+  int amount = 60000;
+  double tax = .10;
+  int bonus = 1000;
+  double total = amount + bonus * tax;
+
+  System.out.println(total);
+
+  The output is 60100. It should be 66100.
+
+  What does the variable declaration for the total need to be to fix this?
+  
+  *:choice:*
+ 
+choices:
+  choice:
+    radio: ["double total = (amount + bonus) * tax + amount", 
+            "double total = amount + bonus * tax + amount", 
+            "double total = amount + bonus * (tax + amount)", 
+            "double total = (amount + bonus) * tax"]
+
+
+   
+answers:
+  choice: "double total = (amount + bonus) * tax + amount"
+ 
+explanation: |
+  This is a classic example of an order of operations error. 
+  Remember the order
+
+      Parentheses
+      Exponents
+      Multiplication
+      Division
+      Addition
+      Subtraction
+
+  The bonus * tax is happening first. 1000 * .10 = 100. 
+  Add that to the amount (60000) and you have 60100.
+  The amount + bonus needs to happen first.
+  That portion needs parentheses. 
+  The result then would be (60000 + 1000) * .10 = 61000 * .10 = 6100. 
+  That amount needs to be added to the original in order to complete the total. 
+  The complete code, then, looks like this
+
+  int amount = 60000;
+  double tax = .10;
+  int bonus = 1000;
+  double total = (amount + bonus) * tax + amount;
+
+  System.out.println(total);
+

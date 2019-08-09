@@ -1,0 +1,50 @@
+title:
+  Database Operations...
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  You work for the Software Development department of a really hightech petshow.
+  You must use your vast skills a programmer to create a connection to a database and extract
+  from it a list of all pets.
+
+
+  PetDatabase db = *:constructor:*;
+  :*list*:<Pet> petsList = *:getPetsAsList:*;
+
+ 
+
+
+
+choices:
+  constructor:
+    dropdown: ["new PetDatabase","new PetDatabase()", "PetDatabase.const()", "new(PetDatabase)"]
+  getPetsAsList:
+    dropdown: ["db->getPetsAsList()","db.getPetsAsList()", "db::getPetsAsList", "getPetsAsList.db"]
+  list:
+    dropdown: ["List", "list", "var", "let"]
+ 
+answers:
+  constructor: "new PetDatabase()"
+  getPetsAsList: "db.getPetsAsList()"
+  list: "List"
+ 
+
+explanation: |
+  In order to construct a an instance of an object we use the 'new' keyword
+  followed by the name of the class and the list of params to the constructor.
+
+  so instanciating the PetDatabase and storing it in a variable becomes this
+
+    PetDatabase db = new PetDatabase();
+
+  It is common practice in java to name methods and variables very explicitly.
+  so because of the names of the variable 'petsList' we can determine that the
+  type of the variable is 'List<Pet>' and the method used to get all the pets is 'getPetsAsList'
+
+  to call a method, we use the '.' operator (e.g. 'db.getPetsAsList()' )
+
+
+
+

@@ -1,0 +1,73 @@
+title:
+  The basics
+
+author:
+  Bogdan Bugarschi
+
+text: |
+
+  Write the most basic program...
+  A simple hello world.
+
+  the main file is called Hello.java
+
+  And your task is to fill in the blanks such that the program
+  outputs 'Hello, world!' to the screen
+
+
+  public *:class:* *:className:* {
+    *:visiblity:* *:static:* *:return:* *:main:*(*:args:*) {
+      *:println:*("*:message:*");
+    }
+  }
+ 
+choices:
+  class:
+    dropdown: ["Class", "void", "final", "class"]
+  className:
+    dropdown: ["Program", "hello", "Hello", "Hello.java"]
+  visiblity:
+    dropdown: ["static", "private", "public", "package"]
+  static:
+    dropdown: ["static", "", "public", "private"]
+  return:
+    dropdown: ["int", "null", "void", "Hello"]
+  main:
+    dropdown: ["main", "Main", "Hello", "println"]
+  args:
+    dropdown: ["int argc, char** argv", "String[] args", "void args", ""]
+  println:
+    dropdown: ["cout", "println", "System.Out.Println", "System.out.println"]
+  message:
+    dropdown: ["Hello, World!", "Hello, world!", "Hello, world", "Hello world!"]
+ 
+answers:
+  class: "class"
+  className: "Hello"
+  visiblity: "public"
+  static: "static"
+  return: "void"
+  main: "main"
+  args: "String[] args"
+  println: "System.out.println"
+  message: "Hello, world!"
+ 
+explanation: |
+  In java, all class names need to be exactly the same as the file names (minus the .java ofc)
+
+  The keyword that marks a file as being a class is ofc 'class'
+  The text states that the name of the file is Hello.java, so the class name must be 'Hello'
+  
+  the main method is the entry point of any java program.
+  it must be 'public' 'static' and return 'void'.
+  it must also accept an array of strings ( 'String[] args' ) as a param. 
+  this array represents comandline arguments to the program.
+
+  One of the ways in which you can print a message to the console is using the 
+  the 'println' method from the output stream 'out' on the 'System' class
+  this is accesed with the '.' (dot) operator like so:
+      'System.out.println'
+
+  Pay attention to the text of the problem. the text specifies what the message
+  needs to be. in this case 'Hello, world!' 
+

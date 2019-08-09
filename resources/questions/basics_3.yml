@@ -1,0 +1,48 @@
+title:
+  System.what?  
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  You want the this fancy program to output the value of some fancy math...
+
+  "The result of the fancy math is 31800."
+
+  public class Foo {
+
+    public static void main(String[] args) {
+      int a = 29000;
+      double b = .06;
+      int c = 1000;
+      int d = a + c;
+      double total = d * b + d;
+      *:choice:*
+    }
+
+  }
+
+choices:
+  choice:
+    dropdown: ["System.out.println(\"The result of the fancy math is \" & total);",
+               "System.out.println(\"The result of the fancy math is \" + total);",
+               "System.in.println(\"The result of the fancy math is \" + total);",
+               "System.in.println(\"The result of the fancy math is \" & total);"]
+
+answers:
+  choice: "System.out.println(\"The result of the fancy math is \" + total);"
+ 
+explanation: |
+
+  public class Foo {
+
+    public static void main(String[] args) {
+      int a = 29000;
+      double b = .06;
+      int c = 1000;
+      int d = a + c;
+      double total = d * b + d;
+      System.out.println("The result of the fancy math is " + total);
+    }
+
+  }

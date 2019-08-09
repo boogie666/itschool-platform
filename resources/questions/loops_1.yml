@@ -1,0 +1,44 @@
+title:
+  for ever more \m/
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  You're gonna want to display stuff...
+  The stuff is in an array...
+
+  Work your magic here...
+
+  public class Stuff {
+
+    public static void main(String args[]) {
+      String[] stuff = {"Foo", "Bar", "Baz", "Quz"};
+      *:choice:* {
+        System.out.println(s);
+      }
+    }
+  }
+   
+choices:
+  choice:
+    dropdown: ["for(String s : stuff)",
+               "for each s in stuff",
+               "do",
+               "while s < stuff.length"]
+
+answers:
+  choice: "for(String s : stuff)"
+
+explanation: |
+  Your magic has failed you i see...
+  Remember how you can iterate through an array...
+
+  there's the `for(int i = 0; i < stuff.length; i++){}`
+
+  but that's not there...
+  and then there's the 'foreach'
+
+  for(String s : stuff) {
+    ...
+  }

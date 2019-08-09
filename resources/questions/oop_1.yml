@@ -1,0 +1,87 @@
+title:
+  OOP Basics
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  You have to create a java class name Person. 
+  The constructor of the Person accepts two strings, that represent the first  and last name of the person.
+
+  You must add fields and getter methods for the two properties and a method get returns the full name of a person.
+  
+  public class Person {
+
+    private final *:firstName:* firstName;
+    private final *:lastName:* lastName;
+
+    public Person( *:constructorFirstName:* firstName, *:constructorLastName:* lastName) {
+      *:this1:*.*:firstNameProp:* = firstName;
+      *:this2:*.lastName = *:lastNameValue:*;
+    }
+
+
+    public String getFirstName() {
+      return *:getterFirstName:*;
+    }
+
+    public String getLastName() {
+      return *:getterLastName:*;
+    }
+
+    public String getFullName(){
+      return getFirstName() + " " + getLastName();
+    }
+  }
+
+
+choices:
+  firstName: 
+    dropdown: ["Object","String", "int", "char[]", "string"]
+  firstNameProp:
+    dropdown: ["FirstName", "first_name", "firstName", "first name"]
+  lastName: 
+    dropdown: ["Object","String", "int", "char[]", "string"]
+  constructorFirstName: 
+    dropdown: ["Object","String", "int", "char[]", "string"]
+  constructorLastName: 
+    dropdown: ["Object","String", "int", "char[]", "string"]
+  lastNameValue:
+    dropdown: ["lastName", "ln", "this.lastName", "firstName"]
+  this1:
+    dropdown: ["self", "me", "static", "this"]
+  this2: 
+    dropdown: ["self", "me", "static", "this"]
+  getterFirstName: 
+    dropdown: ["self.firstName", "me->firstName", "this.firstName", "this->firstName"]
+  getterLastName: 
+    dropdown: ["self.lastName", "me->lastName", "this.lastName", "this->lastName"]
+  
+
+answers:
+  firstName: "String"
+  firstNameProp: "firstName"
+  lastName: "String"
+  lastNameValue: "lastName"
+  constructorFirstName: "String"
+  constructorLastName: "String"
+  this1: "this"
+  this2: "this"
+  getterFirstName: "this.firstName"
+  getterLastName: "this.lastName"
+  
+explanation: |
+  Read the description....
+
+  The Person class accets two String values.
+
+  so the constructor looks like this:
+    public Person(String firstName, String lastName){
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+  accesing a property is done with the 'this' keyword.
+
+  so both getters should return this.firstName or this.lastName...
+    

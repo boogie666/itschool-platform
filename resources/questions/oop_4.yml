@@ -1,0 +1,38 @@
+title:
+  OOP Basics - Part >9000
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Look at the following class definition.
+
+  public class Shape{
+    protected int width;
+    protected int height;
+  }
+
+  The width and height properties are 'only accesible in the Shape class'.
+
+
+  Make the above statement correct by selecting the replacement for the text in quoutes.
+
+
+  *:chooseTheAnswer:*
+
+  
+choices:
+  chooseTheAnswer:
+    radio: ["No change needed.", "only accesible by the Shape class, any subclass, or any class in the same package", 
+            "only accesible by the Shape class or any subclass", "accesible by anyone"]
+
+answers:
+  chooseTheAnswer: "only accesible by the Shape class, any subclass, or any class in the same package"
+
+explanation: |
+  the 'protected' marks a field as being accesible by the current class, 
+  any sub class or any class within the same package.
+
+  'private' means only this class.
+  'public' meens anybody.
+  '<nothing>' means accesible by this class, and any classes in the same package.

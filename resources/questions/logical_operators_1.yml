@@ -1,0 +1,67 @@
+title:
+  Booleans
+ 
+author:
+  Bogdan Bugarschi
+
+text: |
+  You are working on a code block to assign customers to offices based on location. 
+  Customers are assigned to offices as follows:
+
+  Customers in the South region and in Texas are assigned to the Dallas office
+
+  Customers in North and West regions are assigned to the Salt Lake City (SLC) office
+
+  All other customers are assigned to the Atlanta office
+
+  Fill in the missing pieces of code to complete the method.
+
+
+  public static void main(String args[]) {
+
+    if(region == "South" *:choice1:* state == "Texas") {
+      office = "Dallas";
+    }
+    else if (region == "North" *:choice2:* region == "West") {
+      office = "SLC";
+    }
+    else {
+      office = "Atlanta";
+    }
+
+    System.out.println(office);
+  }
+
+  
+choices:
+  choice1:
+    dropdown: ["&&", "&", "||", "AND", "OR"]
+  choice2:
+    dropdown: ["&&", "&", "||", "AND", "OR"]
+
+answers:
+  choice1: "&&"
+  choice2: "||"
+ 
+explanation: |
+  This code uses compound operators. 
+  To start, the && operator is used to indicate an AND as the customer has to be in the South region
+  and in Texas to be assigned to the Dallas office.
+  For the second operator, the customer can be either in the North region OR in the West region. 
+  The || operator fills the OR condition. Thirdly,
+
+  public static void main(String args[]) {
+
+    if(region == "South" && state == "Texas") {
+      office = "Dallas";
+    }
+    else if (region == "North" || region == "West") {
+      office = "SLC";
+    }
+    else {
+      office = "Atlanta";
+    }
+
+    System.out.println(office);
+  }
+

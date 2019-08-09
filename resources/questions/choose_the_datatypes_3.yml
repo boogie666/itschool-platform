@@ -1,0 +1,39 @@
+title:
+  Choose the datatypes 3 - Revenge of the values.
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Match the values with the correct datatype keeping memory constrains in mind.
+
+  String  *:string:*
+  char    *:char:*
+  boolean *:boolean:* 
+  long    *:long:*
+  byte    *:byte:*
+
+
+
+choices:
+  string:
+    dropdown: ['"Hello World"', "42", "10000000000", "'H'", "true", "256"]
+  boolean:
+    dropdown: ['"Hello World"', "42", "10000000000", "'H'","true", "256"]
+  char:
+    dropdown: ['"Hello World"', "42", "10000000000", "'H'","true", "256"]
+  long:
+    dropdown: ['"Hello World"', "42", "10000000000", "'H'","true", "256"]
+  byte:
+    dropdown: ['"Hello World"', "42", "10000000000", "'H'","true", "256"]
+
+
+answers:
+  string: '"Hello World"'
+  char: "'H'"
+  long: "10000000000"
+  boolean: "true"
+  byte: "42"
+
+explanation: |
+  See here https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html

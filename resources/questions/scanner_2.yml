@@ -1,0 +1,72 @@
+title:
+  Hot hot hot hot!!!!
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Time to get hot...
+
+  Let's find out how hot something is in fahrenheit.
+  Add the missing lines to this program so that it reads a double representing the temerature
+  in celsius and outputs the temerature in fahrenheit.
+
+  import java.util.Scanner;
+
+  public class TemperatureCalculations {
+      public static void main(String[] args) {
+          *:scannerLine:*;
+
+          System.out.println("Enter something hot (in celsius):");
+          double celsius = *:readDouble:*;
+          
+          double fahrenheit = 1.8 * celsius + 32;
+
+          System.out.println(celsius + " in Celsius is " + *:result:* + " in Fahrenheit");
+          
+      }
+  }
+   
+choices:
+  scannerLine:
+    dropdown: ["Scanner s = Scanner.create(System.in)", "Scanner s = new.Scanner(System.in)","Scanner s = new Scanner(System.in)", "Scanner s = Scanner.new(System.in)"]
+  readDouble:
+    dropdown: ["s.next()", "s.nextLine()", "s.hasNextDouble()", "s.nextDouble()"]
+  result:
+    dropdown: ["celsius", "fahrenheit", "s.nextDouble()", "s"]
+
+
+answers:
+  scannerLine: "Scanner s = new Scanner(System.in)"
+  readDouble: "s.nextDouble()"
+  result: "fahrenheit"
+
+explanation: |
+  The scanner class, accepts a input stream as a parameter and
+  uses this input stream to get inputs out of it.
+
+  in this case we want to read from standard in.
+
+  so the first line becomes.
+
+    Scanner s = new Scanner(System.in);
+  
+  we notice that the celsius variable is of type double.
+
+  so we need to use the "nextDouble" method of the scanner
+  to get next thing that the user typed in, in the form of a double.
+
+  so the second line becomes:
+    double celsius = s.nextDouble();
+
+  Right at the end, it's a question of paying attention to the intent
+  of the program.
+
+  The program is ment to take a double representing a temperature in celsius,
+  and output what that temp is in fahrenheit.
+
+  so the last line becomes:
+    System.out.println(celsius + " in Celsius is " + fahrenheit + " in Fahrenheit");
+
+    
+

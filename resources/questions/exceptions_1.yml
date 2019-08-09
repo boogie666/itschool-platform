@@ -1,0 +1,36 @@
+title:
+  When it hits the fan 
+author:
+  Bogdan Bugarschi
+
+text: |
+  Evaluate the following exception that was returned as a result of faulty code:
+
+  Exception in thread "main" java.util.InputMismatchException
+  at java.util.Scanner.throwFor(Unknown Source)
+  at java.util.Scanner.next(Unknown Source)
+  at java.util.Scanner.nextInt(Unknown Source)
+  at java.util.Scanner.nextInt(Unknown Source)
+  at ScannerTest.main(ScannerTest.java:9)
+
+  Which statement regarding this exception is true?
+
+
+  *:choice:*
+
+  
+choices:
+  choice:
+    radio: ["The Scanner utility is being used incorrectly",
+            "There are nine errors in the block of code",
+            "The Scanner method is being used incorrectly",
+            "The error is inside of the ScannerTest method inside of the main class"]
+
+answers:
+  choice: "The Scanner utility is being used incorrectly"
+ 
+explanation: |
+  The 9 indicates the line number of the error, not that there were nine errors. 
+  This did not occur in a method called "scanner." 
+  In fact, the only method given is ScannerTest.main. 
+  The error is caused by a mismatch of data types while using the Scanner utility.

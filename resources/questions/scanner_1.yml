@@ -1,0 +1,47 @@
+title:
+  Scanners and Parsing and Data, oh my.
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  You're gonna need to type to the following variables.
+  Look at the code and determine what type the variables should be.
+  Be as specfic as you can.
+
+
+  Scanner s = new Scanner("1 Hello 2 World 3 And 4 The 5 Rest"); 
+  *:typeA:* a = s.next();
+  *:typeB:* b = s.next();
+  *:typeC:* c = s.nextInt();
+  *:typeD:* d = s.nextLine();
+
+
+choices:
+  typeA: 
+    dropdown: ["int", "float", "String", "Object", "double", "char[]"]
+  typeB: 
+    dropdown: ["int", "float", "String", "Object", "double", "char[]"]
+  typeC: 
+    dropdown: ["int", "float", "String", "Object", "double", "char[]"]
+  typeD: 
+    dropdown: ["int", "float", "String", "Object", "double", "char[]"]
+
+answers:
+  typeA: "String"
+  typeB: "String"
+  typeC: "int"
+  typeD: "String"
+
+
+explanation: |
+  While the Object type can be used for anything in java, it is
+  generally, not usefull to do so.
+
+  So for the given example we need to know what the scanner methods
+  return.
+
+  we can assume that 'nextInt' returns an int and 'nextLine' returns a String.
+  
+  we can also intiuite that since the scanner primarily deals with Strings that 
+  the 'next' method also returns a String.

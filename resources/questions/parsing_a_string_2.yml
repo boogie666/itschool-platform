@@ -1,0 +1,37 @@
+title:
+  Parsing a string to a integer
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  You have the following value
+  
+    String x = "42";
+
+  Which of the following lines convers the string into a integer value
+  *:codeLine:*
+
+
+choices:
+  codeLine: 
+    radio: ["int i = (int) x;", "Integer i = Integer.parse(x);", "Integer i = String.asInteger(x)", "Interger i = Integer.parseInt(x);"]
+
+answers:
+  codeLine: "Interger i = Integer.parseInt(x);"
+
+explanation: |
+  All primary datatypes have a 'wrapper' class.
+  (Generally it's called like the primitive, but starting with uppercase)
+
+  These wrapper classes offer various ways to transform the values (among other features)
+
+  One transform is 'parsing'. 
+
+  Parsing will atempt to transform the string representation of a given type to the actuall representation.
+
+  In this case
+  
+  Integer.parseInt(x) is the correct answer as the parseInt static method of the Boolean class
+  does exactly this.
+

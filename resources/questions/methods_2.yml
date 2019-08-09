@@ -1,0 +1,89 @@
+title:
+  Graphics that stun the world with how cool they are!!!
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Your incredibly gifted and handsome collegue, Boogie, created the follow masterpiece of code
+  but forgot to write documentation on how to use it... 
+
+      import java.awt.*;
+
+      public class Rectangle implements Shape {
+
+          private final int width;
+          private final int height;
+          
+          public Rectangle(int width, int height) {
+              this.width = width;
+              this.height = height;
+          }
+
+
+          @Override
+          public void draw(Graphics g) {
+              g.fillRect(0, 0, width, height);
+          }
+
+          @Override
+          public int getArea() {
+              return width * height;
+          }
+
+          @Override
+          public int getPerimeter() {
+              return (width + height) * 2;
+          }
+      }
+       
+  You are now assigned the task of create a 300 area sized Rectangle
+  and print out the perimeter of that shape.
+
+  How do you do that?
+      
+      *:widthType:* width = *:widthValue:*;
+      *:heightType:* height = 10;
+      *:rectInstance:*;
+      System.out.println(*:methodCall:*);
+
+choices:
+  widthType: 
+    dropdown: ["int", "float", "String", "double"]
+  heightType: 
+    dropdown: ["int", "float", "String", "double"]
+  widthValue: 
+    dropdown: ["30", "40", "10", "300"]
+  rectInstance: 
+    dropdown: ["Shape s = new Rectangle(width, height)", "Rectangle s = new Shape(width, height)", "Shape s = new Shape(width, height)", "Shape s = Rectangle.new(width, height)"]
+  methodCall: 
+    dropdown: ["s->getPerimeter()", "s.getPerimeter()", "(s.width + s.height) * 2", "s.perimeter"]
+
+
+answers:
+  widthType: "int"
+  heightType: "int"
+  widthValue: "30"
+  rectInstance: "Shape s = new Rectangle(width, height)"
+  methodCall: "s.getPerimeter()"
+
+explanation: |
+
+  The question asks us to create an instance of the Rectangle that will have 300 units of area.
+  We can tell from the code that area is 'width' times 'height'.
+
+  The height is hardcoded to 10. so the width must be 300 / 10 (or 30)
+  
+  We can also tell from the constructor of Rectangle that both width and height must be ints.
+  
+  When constructing an object we use the 'new' operator.
+  However the 'new' operator can't be applied to an interface, only to a class (either named or annonymus).
+
+  Thus the construction of an object becomes:
+
+    Shape s = new Rectangle(width, height);
+  
+  we can do this becase we know that Shape is a supertype of Rectangle
+  (because Rectangle implements the Shape interface)
+
+  

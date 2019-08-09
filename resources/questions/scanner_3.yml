@@ -1,0 +1,42 @@
+title:
+  new Scanner("Again");   
+ 
+author:
+  Bogdan Bugarschi
+
+text: |
+  import java.util.Scanner;
+
+  public class ScannerTest {
+
+    public static void main(String[] args) {
+      Scanner scanner = new Scanner("1 Hello 2 World 3 What?");
+      Object res1 = scanner.next();
+      Object res2 = scanner.nextInt();
+      Object res3 = scanner.next();
+
+
+      System.out.print(res2);
+    }
+  }
+
+  What will the output at the end of the program.
+  *:choice:*
+
+  
+choices:
+  choice:
+    radio: ["2", "Hello", "1", "An exception"]
+
+answers:
+  choice: "An exception"
+ 
+explanation: |
+  This code will actually throw an exception. 
+
+  The reason: 
+    res1 will be set to 1. 
+    res2 is the next value to be scanned. 
+
+  It is not an integer (it is the word Hello) so it cannot be returned as an integer. 
+  Hence, the exception.

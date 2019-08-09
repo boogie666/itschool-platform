@@ -1,0 +1,38 @@
+title:
+  OOP Basics - Part >9001
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Look at the following class definition.
+
+  public class Person{
+    int width;
+    int height;
+  }
+
+  The width and height properties are 'only accesible in the Person class'.
+
+
+  Make the above statement correct by selecting the replacement for the text in quoutes.
+
+
+  *:chooseTheAnswer:*
+  
+choices:
+  chooseTheAnswer:
+    radio: ["No change needed.", "only accesible by the Person class or any class in the same package", 
+            "only accesible by the Person class or any subclass", "accesible by anyone"] 
+
+answers:
+  chooseTheAnswer: "only accesible by the Person class or any class in the same package"
+
+explanation: |
+  When no visiblity keyword is used for a field, it marked as 'package private'
+  also known as 'default visiblity'. 
+  This allows the field to be accesed by the current class or anything else within the same package.
+
+  'private' means only this class.
+  'protected' means accesible by current class or any subclasses, or anything in the same package.
+  'public' meens anybody.

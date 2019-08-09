@@ -1,0 +1,41 @@
+title:
+  OOP Basics - Side B
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  You wring the following code because Boogie said so...
+
+  public class Foo{
+    public String bar = "baz";
+
+    public String toString(){
+      return bar;
+    }
+  }
+
+  This class needs a custom toString method, because otherwise it's 
+  just not pritty when printing out the console.
+
+  What needs to be added to the method such that if its signiture is wrong the compiler 
+  will let us know.
+
+
+  *:chooseTheAnswer:*
+
+
+choices:
+  chooseTheAnswer:
+    radio: ["@SuppressWarnings", "@Nullable", "@Override", "@CompilerWarning"] 
+
+answers:
+  chooseTheAnswer: "@Override"
+
+explanation: |
+  The @Override annotation is used to mark the method as being inherited.
+
+  If we get the signiture or return type wrong the java compiler will complain
+  that the annotation is used, but the method is not present in the super class.
+
+

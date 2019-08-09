@@ -1,0 +1,39 @@
+title:
+  Evaluate some code in your head No. 3.
+
+author:
+  Bogdan Bugarschi
+
+text: |
+  Evaluate the code below and select the correct anwers from dropdowns.
+
+    01  String value1 = "127";
+    02  value1 += 1;
+    03  System.out.println(value1);
+    04  System.out.println((double) value1);
+    05  System.out.println(value1 + value1);
+
+  What is the output of line 03? *:string:*
+  What is the output of line 04? *:castToDouble:*
+  What is the output of line 05? *:stringConcat:*
+
+
+choices:
+  string:
+    dropdown: ["1271","128", "Compile Error"]
+  castToDouble:
+    dropdown: ["Compile Error", "1271.0", "128.0"]
+  stringConcat:
+    dropdown: ["12711271", "258", "Compile Error"]
+
+answers:
+  string: "1271"
+  castToDouble: "Compile Error"
+  stringConcat: "12711271"
+
+explanation: |
+  Addition in strings is concatenation. 
+  if any value is 'added' to a string, that value becomes a string 
+  and the two string are concatenated togheter.
+
+  A string can't be cast to a double. This will result in a compile time error.
