@@ -7,21 +7,21 @@ import com.itschool.platform.core.Request;
 import com.itschool.platform.core.Response;
 
 public class StaticFileInteractor implements Interactor {
+    private final String basePath;
 
-	public Response execute(Request r) {
+    public StaticFileInteractor(String basePath) {
+        this.basePath = basePath;
+    }
 
-		String path = r.getPath();
+    public Response execute(Request r) {
 
-		if (path.equals("/")) {
-			path += "index.html";
-		}
+        String path = r.getPath();
+        if (path.equals("/")) path += "index.html";
 
-		File f = new File("resources/public" + path);
-		if (f.exists()) {
-			return new FileResponse(f);
-		}
+        final File f = new File(basePath + path);
+        if (f.exists()) return new FileResponse(f);
 
-		return null;
-	}
+        return null;
+    }
 
 }
