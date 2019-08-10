@@ -22,7 +22,7 @@ public class HandlerAdapter extends AbstractHandler {
 	@Override
 	public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		Response r = this.interactor.execute(new com.itschool.platform.core.Request());
+		Response r = this.interactor.execute(new com.itschool.platform.core.Request(request.getPathInfo()));
 		if(r != null) {
 			r.write(response.getOutputStream());
 			baseRequest.setHandled(true);
