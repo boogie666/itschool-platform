@@ -14,3 +14,11 @@ and explenations for said questions.
   2) To provide a simple way for trainers to author questions for their students.
 
 
+
+## Resouces
+
+The application is described in the `docs` folder
+
+`docs/description.md` contains basic project description and goals
+`docs/data-model.md` describes the input and output formats
+`docs/architecture.md` describes a high level overview of the app's architecture
