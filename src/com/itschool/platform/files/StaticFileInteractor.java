@@ -10,13 +10,13 @@ public class StaticFileInteractor implements Interactor {
 
 	public Response execute(Request r) {
 
-		if (r.getPath().equals("/")) {
-			File f = new File("resources/public/index.html");
+		String path = r.getPath();
 
-			return new FileResponse(f);
+		if (path.equals("/")) {
+			path += "index.html";
 		}
 
-		File f = new File("resources/public" + r.getPath());
+		File f = new File("resources/public" + path);
 		if (f.exists()) {
 			return new FileResponse(f);
 		}
