@@ -22,6 +22,11 @@ public class Question {
 
     @Override
     public String toString() {
-        return "{:id " + this.id + " :title \"" + this.title + "\"}";
+        String t = this.title
+                .replace("\\", "\\\\")
+                .replace("\"", "\\\"");
+
+
+        return "{:id " + this.id + " :title \"" + t + "\"}";
     }
 }
