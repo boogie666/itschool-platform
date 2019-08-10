@@ -19,6 +19,9 @@ and explenations for said questions.
 
 The application is described in the `docs` folder
 
+
 `docs/description.md` contains basic project description and goals
+
 `docs/data-model.md` describes the input and output formats
+
 `docs/architecture.md` describes a high level overview of the app's architecture
